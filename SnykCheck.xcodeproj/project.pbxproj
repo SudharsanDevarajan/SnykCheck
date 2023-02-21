@@ -13,6 +13,7 @@
 		0AF6C45F29A4A4F300C7E3EA /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0AF6C45D29A4A4F300C7E3EA /* Main.storyboard */; };
 		0AF6C46129A4A4F600C7E3EA /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0AF6C46029A4A4F600C7E3EA /* Assets.xcassets */; };
 		0AF6C46429A4A4F600C7E3EA /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0AF6C46229A4A4F600C7E3EA /* LaunchScreen.storyboard */; };
+		9EDA6EBA43617BD938B82C1C /* Pods_SnykCheck.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D9CDE42B561BD3AE43191EC0 /* Pods_SnykCheck.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +25,9 @@
 		0AF6C46029A4A4F600C7E3EA /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		0AF6C46329A4A4F600C7E3EA /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		0AF6C46529A4A4F600C7E3EA /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		57C772CDC631E4235BB1F0AB /* Pods-SnykCheck.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SnykCheck.debug.xcconfig"; path = "Target Support Files/Pods-SnykCheck/Pods-SnykCheck.debug.xcconfig"; sourceTree = "<group>"; };
+		AED9F0B6D12FB6156DFC2096 /* Pods-SnykCheck.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SnykCheck.release.xcconfig"; path = "Target Support Files/Pods-SnykCheck/Pods-SnykCheck.release.xcconfig"; sourceTree = "<group>"; };
+		D9CDE42B561BD3AE43191EC0 /* Pods_SnykCheck.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SnykCheck.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -31,6 +35,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9EDA6EBA43617BD938B82C1C /* Pods_SnykCheck.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -42,6 +47,8 @@
 			children = (
 				0AF6C45629A4A4F300C7E3EA /* SnykCheck */,
 				0AF6C45529A4A4F300C7E3EA /* Products */,
+				80ABABE75E96C9CDA2E2DCBB /* Pods */,
+				C145A2F0A08D175B787A67E8 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -67,6 +74,24 @@
 			path = SnykCheck;
 			sourceTree = "<group>";
 		};
+		80ABABE75E96C9CDA2E2DCBB /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				57C772CDC631E4235BB1F0AB /* Pods-SnykCheck.debug.xcconfig */,
+				AED9F0B6D12FB6156DFC2096 /* Pods-SnykCheck.release.xcconfig */,
+			);
+			name = Pods;
+			path = Pods;
+			sourceTree = "<group>";
+		};
+		C145A2F0A08D175B787A67E8 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				D9CDE42B561BD3AE43191EC0 /* Pods_SnykCheck.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -74,9 +99,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 0AF6C46829A4A4F600C7E3EA /* Build configuration list for PBXNativeTarget "SnykCheck" */;
 			buildPhases = (
+				2B00FE94CEF13BE57B0D763E /* [CP] Check Pods Manifest.lock */,
 				0AF6C45029A4A4F300C7E3EA /* Sources */,
 				0AF6C45129A4A4F300C7E3EA /* Frameworks */,
 				0AF6C45229A4A4F300C7E3EA /* Resources */,
+				D69F82ADFF60973A723D31FD /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -132,6 +159,48 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		2B00FE94CEF13BE57B0D763E /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-SnykCheck-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		D69F82ADFF60973A723D31FD /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-SnykCheck/Pods-SnykCheck-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-SnykCheck/Pods-SnykCheck-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-SnykCheck/Pods-SnykCheck-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		0AF6C45029A4A4F300C7E3EA /* Sources */ = {
@@ -282,6 +351,7 @@
 		};
 		0AF6C46929A4A4F600C7E3EA /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 57C772CDC631E4235BB1F0AB /* Pods-SnykCheck.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -310,6 +380,7 @@
 		};
 		0AF6C46A29A4A4F600C7E3EA /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = AED9F0B6D12FB6156DFC2096 /* Pods-SnykCheck.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;

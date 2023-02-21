@@ -1,0 +1,6 @@
+framework module Pods_SnykCheck {
+  umbrella header "Pods-SnykCheck-umbrella.h"
+
+  export *
+  module * { export * }
+}
